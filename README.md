@@ -13,12 +13,6 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like share my kno
 * [Devops - Formation aux outils Devops](https://blog.stephane-robert.info/post/formation-outils-devops/)
 * [Chef - Introduction à l'outil de Gestion de Configuration Chef Infra](https://blog.stephane-robert.info/post/introduction-chef-solo/)
 * [Nomad - L'orchestration par Hashicorp](https://blog.stephane-robert.info/post/introduction-hashicorp-nomad/)
-* [Introduction à Kubernetes](https://blog.stephane-robert.info/post/introduction-kubernetes/)
-* [Livre - Débuter avec Azure](https://blog.stephane-robert.info/post/livre-debuter-avec-azure/)
-* [Apprendre et Maitriser Terraform l'outil d'Infrastructure As Code](https://blog.stephane-robert.info/post/introduction-terraform/)
-* [Intégration Continue avec GITLAB-CI/CD](https://blog.stephane-robert.info/post/introduction-gitlab-ci/)
-* [Introduction à hashicorp Vault](https://blog.stephane-robert.info/post/introduction-vault/)
-* [Apprendre et Maitriser Vagrant](https://blog.stephane-robert.info/post/introduction-vagrant/)
 
 ## Where to find me
 
