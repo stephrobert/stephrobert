@@ -18,4 +18,4 @@ jobs:
         pip install poetry
         poetry install
     - name: Update
-      run: python build.py
+      run: poetry run python build.py
