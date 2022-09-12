@@ -3,22 +3,22 @@
 Welcome to my page!
 I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my knowledges and you can access all examples in my projects.
 
-{% if USER.blog %}
-    **My Blog**: [{{ USER.blog }}]({{ USER.blog }})
-{% endif %}
+[{{mykofi.badge}}]({{mykofi.url}})
 
-{%- if badges is defined -%}
-## I code with
+{% if badges is defined -%}
+## I use often :
 
 {% for badge in badges %}{{ badge }}{% endfor %}
 
-{% endif %}
+{% endif -%}
 
-## My latest blog posts
+{% if USER.blog %}
+## My latest blog posts :
 
 {% for post in last_posts %}
 * [{{post.title}}]({{post.link}})
 {% endfor %}
+{% endif %}
 
 ## Where to find me
 
