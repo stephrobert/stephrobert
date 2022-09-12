@@ -4,7 +4,7 @@ import requests
 
 def get_weather(city):
     # declare the client. format defaults to the metric system (celcius, km/h, etc.)
-    url = 'https://wttr.in/{}?format=3'.format(city)
+    url = 'https://wttr.in/{}?m&format=3'.format(city)
     res = requests.get(url)
     return res.text
 
