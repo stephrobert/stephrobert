@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "stephrobert"
+version = "0.1.0"
+description = "My profile"
+authors = ["Stephane ROBERT <robert.stephane.28@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+profile-readme = "^0.1.2"
+feedparser = "^6.0.10"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+pandas = "^1.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

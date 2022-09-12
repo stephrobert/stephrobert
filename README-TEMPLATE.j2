@@ -1,0 +1,28 @@
+# Hey! Nice to see you
+
+Welcome to my page!
+I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my knowledges and you can access all examples in my projects.
+
+{% if USER.blog %}
+    **My Blog**: [{{ USER.blog }}]({{ USER.blog }})
+{% endif %}
+
+{%- if badges is defined -%}
+## I code with
+
+{% for badge in badges %}{{ badge }}{% endfor %}
+
+{% endif %}
+
+## My latest blog posts
+
+{% for post in last_posts %}
+* [{{post.title}}]({{post.link}})
+{% endfor %}
+
+## Where to find me
+
+[{{ linkedin.badge }}]({{ linkedin.url }}) [{{ twitter.badge }}]({{ twitter.url }})
+
+## Weather
+{{ weather }}
