@@ -20,6 +20,14 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 {% endfor %}
 {% endif %}
 
+{% if links is defined %}
+## My links :
+
+{% for link in links %}
+* [{{link.title}}]({{link.link}})
+{% endfor %}
+{% endif %}
+
 ## Where to find me
 
 [{{ linkedin.badge }}]({{ linkedin.url }}) [{{ twitter.badge }}]({{ twitter.url }})
