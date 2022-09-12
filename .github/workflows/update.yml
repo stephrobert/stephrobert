@@ -19,3 +19,7 @@ jobs:
         poetry install
     - name: Update
       run: poetry run python build.py
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update Info
+
