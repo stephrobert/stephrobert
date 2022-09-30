@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from profile_readme import get_github_context, ProfileGenerator
 import feedparser
 import requests
@@ -9,8 +10,12 @@ def get_weather(city):
     return res.text
 
 def get_feed(feed_url):
-    d = feedparser.parse(feed_url)
-    return d.entries[0:4]
+    feed = feedparser.parse(feed_url)
+    entries = feed.entries
+    from operator import itemgetter
+    feed_sorted = sorted(entries, key=itemgetter('published_parsed'), reverse=True)
+
+    return feed_sorted[0:4]
 
 
 if __name__ == "__main__":
