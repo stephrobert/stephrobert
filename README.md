@@ -9,9 +9,9 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 ## My latest blog posts :
 
 * [Devops - Importance de la veille techno](https://blog.stephane-robert.info/post/devops-importance-veille-techno/)
+* [Introduction à Puppet avec Vagrant](https://blog.stephane-robert.info/post/introduction-puppet/)
 * [Devops - Diagrams as Code](https://blog.stephane-robert.info/post/devops-diagram-as-code/)
 * [Devops - R2DevOps votre assistant pipeline CICD](https://blog.stephane-robert.info/post/devops-r2devops-cicd-gitlab-github/)
-* [DevOps - Ma liste d'outils en ligne de commande indispensables](https://blog.stephane-robert.info/post/devops-outils-linux-indispensables/)
 
 ## My links :
 
@@ -27,4 +27,4 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stephanerobert1/) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/RobertStphane19/)
 
 ## Weather
-Lille: 🌧   +11°C
+Lille: ☁️   +13°C
