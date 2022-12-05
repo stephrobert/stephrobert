@@ -27,9 +27,4 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stephanerobert1/) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/RobertStphane19/)
 
 ## Weather
-
-Sorry, we are running out of queries to the weather service at the moment.
-Here is the weather report for the default city (just to show you what it looks like).
-We will get new queries as soon as possible.
-You can follow https://twitter.com/igor_chubin for the updates.
-======================================================================================
+Lille: 🌧   +4°C
