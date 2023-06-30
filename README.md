@@ -27,4 +27,4 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stephanerobert1/) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/RobertStphane19/)
 
 ## Weather
-Unknown location; please try ~50.6305089,3.0706414
+Lille: ☀️   +14°C
