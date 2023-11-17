@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-from profile_readme import get_github_context, ProfileGenerator
 import feedparser
 import requests
+from profile_readme import get_github_context, ProfileGenerator
+
 
 def get_weather(city):
     # declare the client. format defaults to the metric system (celcius, km/h, etc.)
-    url = 'https://wttr.in/{}?m&format=3'.format(city)
+    url = f'https://wttr.in/{city}?m&format=3'
     res = requests.get(url)
     return res.text
+
 
 def get_feed(feed_url):
     feed = feedparser.parse(feed_url)
@@ -15,14 +17,14 @@ def get_feed(feed_url):
     from operator import itemgetter
     feed_sorted = sorted(entries, key=itemgetter('published_parsed'), reverse=True)
 
-    return feed_sorted[0:4]
+    return feed_sorted[:4]
 
 
 if __name__ == "__main__":
     weather = get_weather("Lille")
     last_posts = get_feed("https://blog.stephane-robert.info/feed.xml")
     context = {
-        "weather" : weather,
+        "weather": weather,
         "last_posts": last_posts,
         "linkedin": {
             "url": "https://www.linkedin.com/in/stephanerobert1/",
@@ -53,7 +55,8 @@ if __name__ == "__main__":
             "![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)",
             "![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)",
             "![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)",
-            "![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)",            "![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)",
+            "![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)",
+            "![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)",
             "![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)",
             "![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)",
             "![GitLab CI](https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)",
