@@ -11,9 +11,12 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 
 ## My links :
 
-* [Formation Devops Complète: philosophie et outils](https://blog.stephane-robert.info/docs/)
-* [Mon blog](https://blog.stephane-robert.info/post/)
-
+* [Vagrant](https://blog.stephane-robert.info/tags/vagrant/)
+* [Ansible](https://blog.stephane-robert.info/post/introduction-ansible/)
+* [Docker](https://blog.stephane-robert.info/tags/docker/)
+* [Kubernetes](https://blog.stephane-robert.info/tags/kubernetes/)
+* [Terraform](https://blog.stephane-robert.info/tags/terraform/)
+* [Gitlab-ci](https://blog.stephane-robert.info/tags/gitlab/)
 
 ## Where to find me
 
