@@ -11,16 +11,12 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 
 ## My links :
 
-* [Vagrant](https://blog.stephane-robert.info/tags/vagrant/)
-* [Ansible](https://blog.stephane-robert.info/post/introduction-ansible/)
-* [Docker](https://blog.stephane-robert.info/tags/docker/)
-* [Kubernetes](https://blog.stephane-robert.info/tags/kubernetes/)
-* [Terraform](https://blog.stephane-robert.info/tags/terraform/)
-* [Gitlab-ci](https://blog.stephane-robert.info/tags/gitlab/)
+* [Mon blog](https://blog.stephane-robert.info/post/)
+* [Formation DevOps](https://blog.stephane-robert.info/docs/)
 
 ## Where to find me
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stephanerobert1/) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/RobertStphane19/)
 
 ## Weather
-Lille: ⛅️  +15°C
+Lille: 🌦   +15°C
