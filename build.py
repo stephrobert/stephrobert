@@ -70,12 +70,12 @@ if __name__ == "__main__":
         },
         "links": [
             {
-                "title": "Vagrant",
-                "link": "https://blog.stephane-robert.info/tags/vagrant/"
+                "title": "Mon blog",
+                "link": "https://blog.stephane-robert.info/post/"
             },
             {
-                "title": "Ansible",
-                "link": "https://blog.stephane-robert.info/post/introduction-ansible/"
+                "title": "Formation DevOps",
+                "link": "https://blog.stephane-robert.info/docs/"
             },
             {
                 "title": "Docker",
