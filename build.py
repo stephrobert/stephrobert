@@ -77,22 +77,6 @@ if __name__ == "__main__":
                 "title": "Formation DevOps",
                 "link": "https://blog.stephane-robert.info/docs/"
             },
-            {
-                "title": "Docker",
-                "link": "https://blog.stephane-robert.info/tags/docker/"
-            },
-            {
-                "title": "Kubernetes",
-                "link": "https://blog.stephane-robert.info/tags/kubernetes/"
-            },
-            {
-                "title": "Terraform",
-                "link": "https://blog.stephane-robert.info/tags/terraform/"
-            },
-            {
-                "title": "Gitlab-ci",
-                "link": "https://blog.stephane-robert.info/tags/gitlab/"
-            }
         ]
     }
     context.update(**get_github_context("stephrobert"))
