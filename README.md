@@ -11,6 +11,7 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 - [Linux Training](https://github.com/stephrobert/linux-training)
 - [Ansible Training](https://github.com/stephrobert/ansible-training)
 - [Containers Training](https://github.com/stephrobert/containers-training/)
+- [Python Training](https://github.com/stephrobert/python-training/)
 
 ## My links :
 
