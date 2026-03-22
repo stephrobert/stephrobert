@@ -23,4 +23,4 @@ I'm Stephane, Infrastructure Enginer from **Lille, France**. I like to share my 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stephanerobert1/) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/RobertStphane19/)
 
 ## Weather
-render failed: response missing current_condition array
+weather fetch failed: failed to make HTTP request: Get "http://127.0.0.1:5001/premium/v1/weather.ashx?key=2b505b8f72ad3b4b2d528d804cb15&q=50.630509,3.070641&format=json&num_of_days=3&includelocation=yes&lang=en": dial tcp 127.0.0.1:5001: connect: connection refused
