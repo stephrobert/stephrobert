@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240" role="img" aria-label="Stephane Robert, DevSecOps Engineer, securing the software supply chain">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f6f8fa"/>
+      <stop offset="100%" stop-color="#eef4f8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0d9488" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#57606a" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="240" rx="12" fill="url(#bg)"/>
+  <rect width="1000" height="240" rx="12" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="999" height="239" rx="12" fill="none" stroke="#d0d7de"/>
+  <rect x="0" y="0" width="5" height="240" fill="url(#accent)"/>
+
+  <!-- terminal dots -->
+  <circle cx="34" cy="30" r="5" fill="#ff5f57"/>
+  <circle cx="52" cy="30" r="5" fill="#febc2e"/>
+  <circle cx="70" cy="30" r="5" fill="#28c840"/>
+  <text x="92" y="35" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#8c959f">~/stephrobert — zsh</text>
+
+  <!-- prompt -->
+  <text x="34" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">
+    <tspan fill="#0d9488">$</tspan><tspan fill="#57606a" dx="10">whoami</tspan>
+  </text>
+
+  <text x="34" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="38" font-weight="700" fill="#1f2328">Stéphane Robert</text>
+  <text x="34" y="163" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="url(#accent)">DevSecOps Engineer · Infrastructure · Supply chain security</text>
+  <text x="34" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" fill="#8c959f">Yffiniac, Brittany, France — I build labs, harden pipelines and write it all down.</text>
+
+  <!-- pipeline -->
+  <g transform="translate(34, 214)">
+    <line x1="0" y1="0" x2="640" y2="0" stroke="#d0d7de" stroke-width="2"/>
+    <line x1="0" y1="0" x2="640" y2="0" stroke="url(#flow)" stroke-width="2" stroke-dasharray="120 520">
+      <animate attributeName="stroke-dashoffset" from="640" to="-120" dur="4.5s" repeatCount="indefinite"/>
+    </line>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" fill="#57606a" text-anchor="middle">
+      <circle cx="0" cy="0" r="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+      <text x="0" y="18">commit</text>
+      <circle cx="128" cy="0" r="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+      <text x="128" y="18">scan</text>
+      <circle cx="256" cy="0" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="1.6"/>
+      <text x="256" y="18">sbom</text>
+      <circle cx="384" cy="0" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="1.6"/>
+      <text x="384" y="18">sign</text>
+      <circle cx="512" cy="0" r="4" fill="#ffffff" stroke="#4f46e5" stroke-width="1.6"/>
+      <text x="512" y="18">attest</text>
+      <circle cx="640" cy="0" r="4" fill="#ffffff" stroke="#4f46e5" stroke-width="1.6"/>
+      <text x="640" y="18">ship</text>
+    </g>
+  </g>
+
+  <!-- right side seal -->
+  <g transform="translate(830, 120)">
+    <circle r="62" fill="none" stroke="#d0d7de" stroke-width="1"/>
+    <circle r="62" fill="none" stroke="url(#accent)" stroke-width="1.5" stroke-dasharray="8 6" stroke-opacity="0.55">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M0 -34 L29 -18 L29 12 Q29 34 0 46 Q-29 34 -29 12 L-29 -18 Z" fill="#ffffff" stroke="url(#accent)" stroke-width="2"/>
+    <path d="M-13 3 L-4 13 L14 -10" fill="none" stroke="#0d9488" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

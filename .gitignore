@@ -1,5 +1,5 @@
+__pycache__/
+*.pyc
+.venv/
 .python-version
-README-TEMPLATE.j2
-poetry.lock
-__pycache__/build.cpython-310.pyc
 github.sqlite

@@ -1,21 +1,18 @@
-[tool.poetry]
-name = "stephrobert"
-version = "0.1.0"
-description = "My profile"
-authors = ["Stephane ROBERT <robert.stephane.28@gmail.com>"]
+[project]
+name = "stephrobert-profile"
+version = "0.2.0"
+description = "Renders the GitHub profile README from a Jinja2 template"
+authors = [{ name = "Stephane ROBERT", email = "robert.stephane.28@gmail.com" }]
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.11"
+dependencies = [
+    "feedparser>=6.0.11",
+    "jinja2>=3.1.4",
+    "requests>=2.32.3",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-profile-readme = "^0.1.2"
-feedparser = "^6.0.10"
+[dependency-groups]
+dev = ["ruff>=0.6"]
 
-
-[tool.poetry.group.dev.dependencies]
-black = "^22.8.0"
-pandas = "^1.4.4"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff]
+line-length = 100
