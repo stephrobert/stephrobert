@@ -1,27 +1,60 @@
-name: Deploy
+name: Update profile README
 
 on:
   schedule:
-    - cron: '5 */2 * * *'
+    # Once a day. The blog does not publish often enough to justify every two
+    # hours, and each run costs a commit in the history.
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'README-TEMPLATE.j2'
+      - 'build.py'
+      - 'pyproject.toml'
+      - 'assets/**'
+      - '.github/workflows/update.yml'
+
+# Least privilege at the top level; the job elevates only what it needs.
+permissions:
+  contents: read
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: false
 
 jobs:
-  build:
-
+  render:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # commit the rendered README.md
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install poetry
-        poetry install --no-root
-    - name: Update
-      run: poetry run python build.py
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Update Info
+      - name: Harden the runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
+        with:
+          egress-policy: audit
 
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990 # v8.3.2
+        with:
+          enable-cache: true
+
+      - name: Render README.md
+        env:
+          # Authenticated calls: 5000 req/h instead of 60 shared across the runner.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run build.py
+
+      - name: Commit if changed
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
+        with:
+          commit_message: 'chore: refresh profile README'
+          file_pattern: README.md

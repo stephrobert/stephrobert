@@ -1,87 +1,181 @@
 #!/usr/bin/env python3
-from profile_readme import get_github_context, ProfileGenerator
+"""Render README.md from README-TEMPLATE.j2.
+
+Every dynamic value comes from a first-party source (GitHub REST API, the blog
+RSS feed). No third-party README widget service is involved: the profile must
+not break the day someone else's free Vercel deployment goes down.
+"""
+
+from __future__ import annotations
+
+import os
+import sys
+from dataclasses import dataclass, field
+
 import feedparser
 import requests
+from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
-def get_weather(city):
-    # declare the client. format defaults to the metric system (celcius, km/h, etc.)
-    url = 'https://wttr.in/{}?m&format=3'.format(city)
-    res = requests.get(url)
-    return res.text
+USER = "stephrobert"
+# Not /feed.xml: that one serves a 129-byte <redirect> stub that feedparser
+# silently parses into zero entries.
+FEED_URL = "https://blog.stephane-robert.info/rss.xml"
+API = "https://api.github.com"
+TIMEOUT = 20
 
-def get_feed(feed_url):
-    feed = feedparser.parse(feed_url)
-    entries = feed.entries
-    from operator import itemgetter
-    feed_sorted = sorted(entries, key=itemgetter('published_parsed'), reverse=True)
+# Repositories promoted by hand, in display order. Everything else is derived.
+# Private ones are skipped silently by pick(): they show up here the day they
+# are made public, and never as a 404 for a visitor in the meantime.
+FLAGSHIP = "dsoxlab"
+# Kept out of the GitHub description, which is written for the repo page and is
+# too long for a heading.
+FLAGSHIP_TAGLINE = "a CLI framework for hands-on DevSecOps labs"
+SECURITY_REPOS = [
+    "pavois",
+    # "confkit",   # superseded by pavois
+    # "scankit",   # still private, to be published later
+    "secure-python-pipeline",
+]
+TRAINING_REPOS = [
+    "linux-dsoxlab-training",
+    "containers-training",
+    "ansible-training",
+    "python-training",
+    "github-actions-training",
+]
 
-    return feed_sorted[0:4]
+
+@dataclass
+class Repo:
+    name: str
+    description: str
+    stars: int
+    language: str
+    url: str
+    topics: list[str] = field(default_factory=list)
+
+
+def session() -> requests.Session:
+    s = requests.Session()
+    s.headers["Accept"] = "application/vnd.github+json"
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        s.headers["Authorization"] = f"Bearer {token}"
+    return s
+
+
+def fetch_repos(s: requests.Session) -> dict[str, Repo]:
+    repos: dict[str, Repo] = {}
+    page = 1
+    while True:
+        r = s.get(
+            f"{API}/users/{USER}/repos",
+            params={"per_page": 100, "page": page, "type": "owner", "sort": "pushed"},
+            timeout=TIMEOUT,
+        )
+        r.raise_for_status()
+        batch = r.json()
+        if not batch:
+            break
+        for item in batch:
+            if item.get("fork"):
+                continue
+            repos[item["name"]] = Repo(
+                name=item["name"],
+                description=(item.get("description") or "").strip(),
+                stars=item.get("stargazers_count", 0),
+                language=item.get("language") or "",
+                url=item["html_url"],
+                topics=item.get("topics") or [],
+            )
+        page += 1
+    return repos
+
+
+def pick(repos: dict[str, Repo], names: list[str]) -> list[Repo]:
+    """Keep the requested repos, in order, skipping the private/missing ones."""
+    return [repos[n] for n in names if n in repos]
+
+
+def strip_name_prefix(name: str, description: str) -> str:
+    """Drop a leading "name — " from a description: the name is already the link."""
+    for sep in (" — ", " - ", ": "):
+        prefix = f"{name}{sep}"
+        if description.lower().startswith(prefix.lower()):
+            rest = description[len(prefix) :]
+            return rest[:1].upper() + rest[1:]
+    return description
+
+
+def latest_posts(limit: int = 5) -> list[dict[str, str]]:
+    feed = feedparser.parse(FEED_URL)
+    if feed.bozo and not feed.entries:
+        raise RuntimeError(f"unusable feed {FEED_URL}: {feed.bozo_exception}")
+    # An empty feed means the URL moved, not that I stopped writing. Fail loudly
+    # rather than render a blog section with no blog in it.
+    if not feed.entries:
+        raise RuntimeError(f"no entries in {FEED_URL} (HTTP {feed.get('status')})")
+    entries = sorted(
+        feed.entries,
+        key=lambda e: e.get("published_parsed") or e.get("updated_parsed"),
+        reverse=True,
+    )
+    return [
+        {"title": e.title.strip(), "link": e.link, "date": _fmt(e)}
+        for e in entries[:limit]
+    ]
+
+
+def _fmt(entry) -> str:
+    t = entry.get("published_parsed") or entry.get("updated_parsed")
+    return f"{t.tm_year}-{t.tm_mon:02d}-{t.tm_mday:02d}" if t else ""
+
+
+def main() -> int:
+    s = session()
+
+    user = s.get(f"{API}/users/{USER}", timeout=TIMEOUT)
+    user.raise_for_status()
+    user = user.json()
+
+    repos = fetch_repos(s)
+    if FLAGSHIP not in repos:
+        raise RuntimeError(f"flagship repo {FLAGSHIP!r} not found in the API response")
+
+    for repo in repos.values():
+        repo.description = strip_name_prefix(repo.name, repo.description)
+
+    context = {
+        "user": user,
+        "followers": user["followers"],
+        "total_stars": sum(r.stars for r in repos.values()),
+        "public_repos": len(repos),
+        "flagship": repos[FLAGSHIP],
+        "flagship_tagline": FLAGSHIP_TAGLINE,
+        "security_repos": pick(repos, SECURITY_REPOS),
+        "training_repos": pick(repos, TRAINING_REPOS),
+        "posts": latest_posts(),
+    }
+
+    env = Environment(
+        loader=FileSystemLoader("."),
+        undefined=StrictUndefined,
+        trim_blocks=True,
+        lstrip_blocks=True,
+        keep_trailing_newline=True,
+        autoescape=False,
+    )
+    rendered = env.get_template("README-TEMPLATE.j2").render(**context)
+
+    with open("README.md", "w", encoding="utf-8") as fh:
+        fh.write(rendered)
+
+    print(
+        f"README.md rendered: {context['public_repos']} repos, "
+        f"{context['total_stars']} stars, {len(context['posts'])} posts"
+    )
+    return 0
 
 
 if __name__ == "__main__":
-    weather = get_weather("Lille")
-    last_posts = get_feed("https://blog.stephane-robert.info/feed.xml")
-    context = {
-        "weather" : weather,
-        "last_posts": last_posts,
-        "linkedin": {
-            "url": "https://www.linkedin.com/in/stephanerobert1/",
-            "badge": "![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)",
-        },
-        "twitter": {
-            "url": "https://twitter.com/RobertStphane19/",
-            "badge": "![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)",
-        },
-        "badges": [
-            "![Vagrant](https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white)",
-            "![Packer](https://img.shields.io/badge/packer-%23E7EEF0.svg?style=for-the-badge&logo=packer&logoColor=%2302A8EF)",
-            "![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)",
-            "![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)",
-            "![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)",
-            "![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)",
-            "![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)",
-            "![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)",
-            "![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)",
-            "![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)",
-            "![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)",
-            "![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)",
-            "![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)",
-            "![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)",
-            "![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)",
-            "![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)",
-            "![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)",
-            "![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)",
-            "![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)",
-            "![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)",
-            "![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)",            "![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)",
-            "![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)",
-            "![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)",
-            "![GitLab CI](https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)",
-            "![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)",
-            "![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white)",
-            "![Cent OS](https://img.shields.io/badge/cent%20os-002260?style=for-the-badge&logo=centos&logoColor=F0F0F0)",
-            "![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)",
-            "![Rocky Linux](https://img.shields.io/badge/-Rocky%20Linux-%2310B981?style=for-the-badge&logo=rockylinux&logoColor=white)",
-            "![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)",
-        ],
-        "mykofi": {
-            "url": "https://ko-fi.com/stephanerobert89902",
-            "badge": "![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)"
-        },
-        "links": [
-            {
-                "title": "Mon blog",
-                "link": "https://blog.stephane-robert.info/post/"
-            },
-            {
-                "title": "Formation DevOps",
-                "link": "https://blog.stephane-robert.info/docs/"
-            },
-        ]
-    }
-    context.update(**get_github_context("stephrobert"))
-    ProfileGenerator.render(
-        template_path="README-TEMPLATE.j2",
-        output_path="README.md",
-        context=context,
-    )
+    sys.exit(main())
