@@ -17,7 +17,7 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2261 stars across 35 public repositories" src="https://img.shields.io/badge/stars-2261%20across%2035%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2263 stars across 35 public repositories" src="https://img.shields.io/badge/stars-2263%20across%2035%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at **Outscale France**, working from Yffiniac in Brittany, France.
@@ -86,7 +86,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 Self-hosted, runnable, no signup wall.
 
-- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 21</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
+- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 22</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
 - **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 159</sub> — Formation Conteneurisation Gratuite
 - **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 107</sub> — Une formation Ansible complète
 - **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 41</sub> — Une formation Python pour les Admin Sys
