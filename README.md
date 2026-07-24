@@ -17,7 +17,7 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2270 stars across 35 public repositories" src="https://img.shields.io/badge/stars-2270%20across%2035%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2275 stars across 35 public repositories" src="https://img.shields.io/badge/stars-2275%20across%2035%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at **Outscale France**, working from Yffiniac in Brittany, France.
@@ -64,11 +64,11 @@ dsoxlab list-labs       # the active catalog is detected from the repo's meta.ym
 
 Free, in French, and updated far more often than this README. Roughly a hundred articles and a full DevOps course live at **[blog.stephane-robert.info](https://blog.stephane-robert.info)**.
 
+- **[Quand vos dépôts GitHub deviennent l'infrastructure d'attaque d'un autre](https://blog.stephane-robert.info/post/github-actions-infrastructure-attaque-cpanel/)** <sub>2026-07-23</sub>
+- **[Mes extensions Visual Studio Code préférées pour le DevOps](https://blog.stephane-robert.info/post/vscode-favorite-extensions/)** <sub>2026-07-23</sub>
 - **[Une usine logicielle sécurisée sur Incus, pas sur Kubernetes](https://blog.stephane-robert.info/post/usine-logicielle-securisee-incus/)** <sub>2026-07-06</sub>
 - **[AWX n'a plus de release depuis deux ans : le risque et la solution](https://blog.stephane-robert.info/post/awx-sans-nouvelle-release-risque-et-solution/)** <sub>2026-07-03</sub>
 - **[Chainguard Actions : une excellente initiative pour durcir vos GitHub Actions](https://blog.stephane-robert.info/post/chainguard-actions-plumber-securite-cicd/)** <sub>2026-07-02</sub>
-- **[Incus OS : j'ai monté un cluster sans jamais ouvrir l'interface](https://blog.stephane-robert.info/post/incus-os-cluster-sans-shell/)** <sub>2026-07-01</sub>
-- **[Strix : le pentester IA open-source à l'épreuve de la souveraineté](https://blog.stephane-robert.info/post/strix-pentester-ia-souverainete/)** <sub>2026-06-26</sub>
 
 <p>
   <a href="https://blog.stephane-robert.info/post/"><img alt="Read all articles" src="https://img.shields.io/badge/read-all%20articles-2dd4bf?style=flat-square"></a>
@@ -87,8 +87,8 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 Self-hosted, runnable, no signup wall.
 
 - **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 24</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
-- **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 159</sub> — Formation Conteneurisation Gratuite
-- **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 107</sub> — Une formation Ansible complète
+- **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 160</sub> — Formation Conteneurisation Gratuite
+- **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 110</sub> — Une formation Ansible complète
 - **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 41</sub> — Une formation Python pour les Admin Sys
 - **[github-actions-training](https://github.com/stephrobert/github-actions-training)** <sub>★ 5</sub> — Hands-on training repository.
 
