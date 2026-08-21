@@ -17,7 +17,7 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2434 stars across 38 public repositories" src="https://img.shields.io/badge/stars-2434%20across%2038%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2445 stars across 39 public repositories" src="https://img.shields.io/badge/stars-2445%20across%2039%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at **Outscale France**, working from Yffiniac in Brittany, France.
@@ -80,17 +80,17 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🔐 Supply chain & compliance tooling
 
-- **[secure-python-pipeline](https://github.com/stephrobert/secure-python-pipeline)** <sub>`Python`</sub> — Lab : API Python avec pipeline CI/CD securise (supply chain, SLSA, SBOM, cosign)
+- **[secure-python-pipeline](https://github.com/stephrobert/secure-python-pipeline)** <sub>`Python`</sub> <sub>★ 1</sub> — Lab : API Python avec pipeline CI/CD securise (supply chain, SLSA, SBOM, cosign)
 
 ## 🎓 Free training catalogs
 
 Self-hosted, runnable, no signup wall.
 
-- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 31</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
-- **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 162</sub> — Formation Conteneurisation Gratuite
-- **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 116</sub> — Une formation Ansible complète
-- **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 41</sub> — Une formation Python pour les Admin Sys
-- **[github-actions-training](https://github.com/stephrobert/github-actions-training)** <sub>★ 5</sub> — Hands-on training repository.
+- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 32</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
+- **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 163</sub> — Formation Conteneurisation Gratuite
+- **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 117</sub> — Une formation Ansible complète
+- **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 42</sub> — Une formation Python pour les Admin Sys
+- **[github-actions-training](https://github.com/stephrobert/github-actions-training)** <sub>★ 6</sub> — Hands-on training repository.
 
 ## 🛠️ What I actually use
 
