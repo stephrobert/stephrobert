@@ -86,7 +86,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 Self-hosted, runnable, no signup wall.
 
-- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 32</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
+- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 33</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
 - **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 164</sub> — Formation Conteneurisation Gratuite
 - **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 117</sub> — Une formation Ansible complète
 - **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 42</sub> — Une formation Python pour les Admin Sys
