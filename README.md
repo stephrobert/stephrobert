@@ -17,46 +17,133 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2484 stars across 43 public repositories" src="https://img.shields.io/badge/stars-2484%20across%2043%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2485 stars across 44 public repositories" src="https://img.shields.io/badge/stars-2485%20across%2044%20repos-eab308?style=flat-square&logo=github">
 </p>
 
-I am **Stéphane ROBERT**, infrastructure engineer at **Outscale France**, working from Yffiniac in Brittany, France.
+I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
 
 I spend my days hardening pipelines and my evenings writing about it. Everything I learn ends up in one of two places: a **[free tutorial on my blog](https://blog.stephane-robert.info)**, or a **lab you can actually run** from one of the repositories below. Nothing here is a demo that only works on my laptop.
 
 ---
 
-## 🧪 dsoxlab — a CLI framework for hands-on DevSecOps labs
+## What I build
+
+Four tools, each one because the existing answer did not hold up.
+
+| | | |
+|---|---|---|
+| 🎭 | **[feint](https://github.com/stephrobert/feint)** | the Scaleway, Outscale and Exoscale APIs, on your laptop &nbsp; <a href="https://github.com/stephrobert/feint/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a> |
+| 🧪 | **[dsoxlab](https://github.com/stephrobert/dsoxlab)** | hands-on DevSecOps labs that grade the machine, not your typing &nbsp; <a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a> |
+| 🛰️ | **[pepin](https://github.com/stephrobert/pepin)** | three sovereign clouds, one axis &nbsp; <a href="https://github.com/stephrobert/pepin/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square&label=&color=eab308"></a> |
+| 🛡️ | **[pavois](https://github.com/stephrobert/pavois)** | Linux compliance that reads the running config, not the files &nbsp; <a href="https://github.com/stephrobert/pavois/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a> |
+
+---
+
+### 🎭 feint — the Scaleway, Outscale and Exoscale APIs, on your laptop
+
+<p>
+  <a href="https://github.com/stephrobert/feint/actions/workflows/go.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/feint/go.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/feint"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/feint?style=flat-square&label=OpenSSF%20Scorecard"></a>
+  <a href="https://github.com/stephrobert/feint/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/feint?style=flat-square&logo=github&color=2dd4bf"></a>
+  <a href="https://github.com/stephrobert/feint/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square"></a>
+  <a href="https://github.com/stephrobert/feint/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/stephrobert/feint?style=flat-square&color=blue"></a>
+</p>
+
+**The problem:** testing cloud automation needs a real account, real credentials and a real bill. And a pipeline that needs secrets cannot run on a pull request from a fork, which is where the contributions come from.
+
+**feint** is a local emulator of three cloud APIs. It is not a mock written against the documentation: the vendors' **own official CLIs** drive it end to end, and Terraform and OpenTofu drive two of the three. If `scw`, `osc-cli` or `exo` cannot tell the difference, neither can your automation.
+
+- **No account, no credentials, nothing billed.** It runs offline, on a laptop, in CI, on a plane.
+- **Driven by the real clients.** Conformance is proven by the vendors' CLIs, not by assertions about them.
+- **Ships where you already are.** A [GitHub Action](https://github.com/stephrobert/setup-feint) and a [Homebrew tap](https://github.com/stephrobert/homebrew-feint) whose formula is derived from each release's signed checksums, never written by hand.
+
+```bash
+feint up                      # three cloud APIs, locally
+scw instance server list      # the vendor's own CLI, unmodified
+terraform apply               # against the emulator, nothing billed
+```
+
+---
+
+### 🧪 dsoxlab — hands-on DevSecOps labs that grade the machine, not your typing
 
 <p>
   <a href="https://github.com/stephrobert/dsoxlab/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/dsoxlab/ci.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/dsoxlab"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/dsoxlab?style=flat-square&label=OpenSSF%20Scorecard"></a>
   <a href="https://github.com/stephrobert/dsoxlab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/dsoxlab?style=flat-square&logo=github&color=2dd4bf"></a>
   <a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square"></a>
-  <a href="https://github.com/stephrobert/dsoxlab/blob/main/LICENSE"><img alt="Apache 2.0 license" src="https://img.shields.io/github/license/stephrobert/dsoxlab?style=flat-square&color=blue"></a>
+  <a href="https://github.com/stephrobert/dsoxlab/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/stephrobert/dsoxlab?style=flat-square&color=blue"></a>
 </p>
 
-**The problem:** most hands-on labs grade you on the commands you typed. Real exams — RHCSA, LFCS — grade the state of the machine, after a reboot. That gap is exactly where candidates fail.
+**The problem:** most hands-on labs grade you on the commands you typed. Real exams, RHCSA and LFCS, grade the state of the machine, after a reboot. That gap is exactly where candidates fail.
 
 **dsoxlab** is a domain-agnostic CLI framework driving training labs that live in their own repositories. Each catalog declares itself through a root `meta.yml` and one `lab.yaml` per lab, so adding a domain means writing a file, not patching the engine.
 
 - **Validation proves, it does not trust.** Labs are graded on the actual state of the system with `pytest-testinfra`, including persistence after reboot.
-- **Three runtimes.** A plain shell, an Incus container, or a full KVM/libvirt virtual machine — chosen per lab.
+- **Three runtimes.** A plain shell, an Incus container, or a full KVM/libvirt virtual machine, chosen per lab.
 - **Progress that sticks.** Scores, hint costs and history persisted in a local SQLite database, XDG-compliant.
 - **Bilingual by design.** Every user-facing string ships in English and French (`DSOXLAB_LANG=en|fr`).
 
 ```bash
-git clone https://github.com/stephrobert/dsoxlab.git && cd dsoxlab
-uv tool install --editable .
-dsoxlab doctor          # diagnoses (and repairs) the local toolchain
-
-git clone https://github.com/stephrobert/linux-dsoxlab-training.git && cd linux-dsoxlab-training
-dsoxlab list-labs       # the active catalog is detected from the repo's meta.yml
+uv tool install dsoxlab
+dsoxlab doctor                # diagnoses (and repairs) the local toolchain
+dsoxlab list-labs             # the catalog is detected from the repo's meta.yml
 ```
 
 <p align="center">
-  <a href="https://github.com/stephrobert/dsoxlab"><img alt="dsoxlab in action: listing labs and showing one from the terminal" src="https://raw.githubusercontent.com/stephrobert/dsoxlab/main/docs/demo.gif" width="760"></a>
+  <a href="https://github.com/stephrobert/dsoxlab"><img alt="dsoxlab in action" src="https://raw.githubusercontent.com/stephrobert/dsoxlab/main/docs/demo.gif" width="760"></a>
 </p>
+
+---
+
+### 🛰️ pepin — three sovereign clouds, one axis
+
+<p>
+  <a href="https://github.com/stephrobert/pepin/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/pepin/ci.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/pepin"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/pepin?style=flat-square&label=OpenSSF%20Scorecard"></a>
+  <a href="https://github.com/stephrobert/pepin/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/pepin?style=flat-square&logo=github&color=2dd4bf"></a>
+  <a href="https://github.com/stephrobert/pepin/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square"></a>
+  <a href="https://github.com/stephrobert/pepin/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/stephrobert/pepin?style=flat-square&color=blue"></a>
+</p>
+
+**The problem:** every provider ships its own posture dashboard, so three clouds means three scores that cannot be compared, and a question nobody can answer: which of them is actually the worst?
+
+**pepin** evaluates Outscale, Scaleway and Exoscale against **one** baseline, anchored on SCSL, SecNumCloud, CIS and ISO. One axis, three clouds, so the comparison means something.
+
+- **Before it is provisioned, not after it is billed.** It reads a Terraform plan, so a misconfiguration is caught at review time.
+- **Sovereign by construction.** No dependency on a US-hosted control plane to tell you how your European cloud is doing.
+- **One baseline, not a crosswalk.** A control is mapped to the texts it really cites, and never invented to fill a table.
+
+```bash
+pepin scan --provider outscale        # posture of a live account
+pepin scan --tf plan.json             # or of a plan, before apply
+```
+
+---
+
+### 🛡️ pavois — Linux compliance that reads the running config, not the files
+
+<p>
+  <a href="https://github.com/stephrobert/pavois/actions/workflows/go.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/pavois/go.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/pavois"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/pavois?style=flat-square&label=OpenSSF%20Scorecard"></a>
+  <a href="https://github.com/stephrobert/pavois/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/pavois?style=flat-square&logo=github&color=2dd4bf"></a>
+  <a href="https://github.com/stephrobert/pavois/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square"></a>
+  <a href="https://github.com/stephrobert/pavois/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/stephrobert/pavois?style=flat-square&color=blue"></a>
+</p>
+
+**The problem:** `/etc/ssh/sshd_config` can say `PermitRootLogin no` while a drop-in read later sets it to `yes`. Every file-based scanner reports the host compliant. The machine accepts root over SSH.
+
+**pavois** asks the service instead of reading its files: `sshd -T`, `sysctl`, `systemctl show`, `auditctl -l`. The **effective** configuration, which is the only one an attacker meets. 789 controls across 9 Linux targets, graded A to E over CIS, ANSSI-BP-028, NIST, PCI-DSS and DISA STIG.
+
+- **It hardens, and proves it.** `harden apply --reboot` compares the kernel `boot_id` before and after, so a setting that only holds until the next boot cannot pass silently.
+- **Evidence you can hand to an auditor.** A campaign packages into a tamper-evident bundle you sign under your own identity; pavois never holds a key.
+- **Proven, not asserted.** Debian 12 and 13 go through the full campaign on fresh VMs, and the run itself is validated: a control that returned a verdict it never measured fails the campaign.
+
+```bash
+pavois scan local --sudo              # grade this host, A to E
+pavois harden plan admin@server1      # a reviewable plan, nothing applied
+pavois bundle before.json after.json  # signable evidence
+```
 
 ---
 
@@ -80,6 +167,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🔐 Supply chain & compliance tooling
 
+- **[scankit](https://github.com/stephrobert/scankit)** <sub>`Go`</sub> — Shared Go library: terminal presentation, SARIF, findings and A-E scoring for security tooling
 - **[secure-python-pipeline](https://github.com/stephrobert/secure-python-pipeline)** <sub>`Python`</sub> <sub>★ 1</sub> — Lab : API Python avec pipeline CI/CD securise (supply chain, SLSA, SBOM, cosign)
 
 ## 🎓 Free training catalogs
@@ -87,6 +175,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 Self-hosted, runnable, no signup wall.
 
 - **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 35</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
+- **[kubernetes-dsoxlab-training](https://github.com/stephrobert/kubernetes-dsoxlab-training)** <sub>★ 2</sub> — Labs Kubernetes vérifiables pour CKA, CKAD et CKS, sur un cluster kubeadm vanilla. Pilotés par la CLI dsoxlab.
 - **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 165</sub> — Formation Conteneurisation Gratuite
 - **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 117</sub> — Une formation Ansible complète
 - **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 42</sub> — Une formation Python pour les Admin Sys

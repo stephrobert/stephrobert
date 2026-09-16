@@ -20,44 +20,54 @@
   <img alt="{{ total_stars }} stars across {{ public_repos }} public repositories" src="https://img.shields.io/badge/stars-{{ total_stars }}%20across%20{{ public_repos }}%20repos-eab308?style=flat-square&logo=github">
 </p>
 
-I am **{{ user.name }}**, infrastructure engineer at **{{ user.company }}**, working from Yffiniac in Brittany, France.
+I am **{{ user.name }}**, infrastructure engineer at <a href="{{ employer.url }}"><img src="{{ employer.logo }}" height="18" alt="{{ employer.name }}" align="top"> <b>{{ employer.name }}</b></a>, working from Yffiniac in Brittany, France.
 
 I spend my days hardening pipelines and my evenings writing about it. Everything I learn ends up in one of two places: a **[free tutorial on my blog](https://blog.stephane-robert.info)**, or a **lab you can actually run** from one of the repositories below. Nothing here is a demo that only works on my laptop.
 
 ---
 
-## 🧪 {{ flagship.name }} — {{ flagship_tagline }}
+## What I build
+
+Four tools, each one because the existing answer did not hold up.
+
+| | | |
+|---|---|---|
+{% for f in featured %}
+| {{ f.emoji }} | **[{{ f.repo.name }}]({{ f.repo.url }})** | {{ f.tagline }} &nbsp; <a href="{{ f.repo.url }}/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/{{ user.login }}/{{ f.repo.name }}?style=flat-square&label=&color=eab308"></a> |
+{% endfor %}
+
+{% for f in featured %}
+---
+
+### {{ f.emoji }} {{ f.repo.name }} — {{ f.tagline }}
 
 <p>
-  <a href="{{ flagship.url }}/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/{{ user.login }}/{{ flagship.name }}/ci.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
-  <a href="https://securityscorecards.dev/viewer/?uri=github.com/{{ user.login }}/{{ flagship.name }}"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/{{ user.login }}/{{ flagship.name }}?style=flat-square&label=OpenSSF%20Scorecard"></a>
-  <a href="{{ flagship.url }}/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/{{ user.login }}/{{ flagship.name }}?style=flat-square&logo=github&color=2dd4bf"></a>
-  <a href="{{ flagship.url }}/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/{{ user.login }}/{{ flagship.name }}?style=flat-square"></a>
-  <a href="{{ flagship.url }}/blob/main/LICENSE"><img alt="Apache 2.0 license" src="https://img.shields.io/github/license/{{ user.login }}/{{ flagship.name }}?style=flat-square&color=blue"></a>
+  <a href="{{ f.repo.url }}/actions/workflows/{{ f.ci }}"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/{{ user.login }}/{{ f.repo.name }}/{{ f.ci }}?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/{{ user.login }}/{{ f.repo.name }}"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/{{ user.login }}/{{ f.repo.name }}?style=flat-square&label=OpenSSF%20Scorecard"></a>
+  <a href="{{ f.repo.url }}/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/{{ user.login }}/{{ f.repo.name }}?style=flat-square&logo=github&color=2dd4bf"></a>
+  <a href="{{ f.repo.url }}/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/{{ user.login }}/{{ f.repo.name }}?style=flat-square"></a>
+  <a href="{{ f.repo.url }}/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/{{ user.login }}/{{ f.repo.name }}?style=flat-square&color=blue"></a>
 </p>
 
-**The problem:** most hands-on labs grade you on the commands you typed. Real exams — RHCSA, LFCS — grade the state of the machine, after a reboot. That gap is exactly where candidates fail.
+**The problem:** {{ f.problem }}
 
-**{{ flagship.name }}** is a domain-agnostic CLI framework driving training labs that live in their own repositories. Each catalog declares itself through a root `meta.yml` and one `lab.yaml` per lab, so adding a domain means writing a file, not patching the engine.
+{{ f.body }}
 
-- **Validation proves, it does not trust.** Labs are graded on the actual state of the system with `pytest-testinfra`, including persistence after reboot.
-- **Three runtimes.** A plain shell, an Incus container, or a full KVM/libvirt virtual machine — chosen per lab.
-- **Progress that sticks.** Scores, hint costs and history persisted in a local SQLite database, XDG-compliant.
-- **Bilingual by design.** Every user-facing string ships in English and French (`DSOXLAB_LANG=en|fr`).
+{% for bullet in f.bullets %}
+- {{ bullet }}
+{% endfor %}
 
 ```bash
-git clone https://github.com/{{ user.login }}/{{ flagship.name }}.git && cd {{ flagship.name }}
-uv tool install --editable .
-dsoxlab doctor          # diagnoses (and repairs) the local toolchain
-
-git clone https://github.com/{{ user.login }}/linux-dsoxlab-training.git && cd linux-dsoxlab-training
-dsoxlab list-labs       # the active catalog is detected from the repo's meta.yml
+{{ f.snippet }}
 ```
 
+{% if f.demo %}
 <p align="center">
-  <a href="{{ flagship.url }}"><img alt="dsoxlab in action: listing labs and showing one from the terminal" src="https://raw.githubusercontent.com/{{ user.login }}/{{ flagship.name }}/main/docs/demo.gif" width="760"></a>
+  <a href="{{ f.repo.url }}"><img alt="{{ f.repo.name }} in action" src="{{ f.demo }}" width="760"></a>
 </p>
 
+{% endif %}
+{% endfor %}
 ---
 
 ## 📝 Latest from the blog
