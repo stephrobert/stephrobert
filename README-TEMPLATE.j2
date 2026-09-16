@@ -30,11 +30,16 @@ I spend my days hardening pipelines and my evenings writing about it. Everything
 
 Four tools, each one because the existing answer did not hold up.
 
-| | | |
-|---|---|---|
+<table>
 {% for f in featured %}
-| {{ f.emoji }} | **[{{ f.repo.name }}]({{ f.repo.url }})** | {{ f.tagline }} &nbsp; <a href="{{ f.repo.url }}/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/{{ user.login }}/{{ f.repo.name }}?style=flat-square&label=&color=eab308"></a> |
+  <tr>
+    <td align="center" width="44">{{ f.emoji }}</td>
+    <td><a href="{{ f.repo.url }}"><b>{{ f.repo.name }}</b></a></td>
+    <td>{{ f.tagline }}</td>
+    <td align="right"><a href="{{ f.repo.url }}/stargazers"><img alt="{{ f.repo.stars }} stars" src="https://img.shields.io/github/stars/{{ user.login }}/{{ f.repo.name }}?style=flat-square&label=&color=eab308"></a></td>
+  </tr>
 {% endfor %}
+</table>
 
 {% for f in featured %}
 ---

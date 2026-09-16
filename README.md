@@ -30,12 +30,32 @@ I spend my days hardening pipelines and my evenings writing about it. Everything
 
 Four tools, each one because the existing answer did not hold up.
 
-| | | |
-|---|---|---|
-| 🎭 | **[feint](https://github.com/stephrobert/feint)** | the Scaleway, Outscale and Exoscale APIs, on your laptop &nbsp; <a href="https://github.com/stephrobert/feint/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a> |
-| 🧪 | **[dsoxlab](https://github.com/stephrobert/dsoxlab)** | hands-on DevSecOps labs that grade the machine, not your typing &nbsp; <a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a> |
-| 🛰️ | **[pepin](https://github.com/stephrobert/pepin)** | three sovereign clouds, one axis &nbsp; <a href="https://github.com/stephrobert/pepin/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square&label=&color=eab308"></a> |
-| 🛡️ | **[pavois](https://github.com/stephrobert/pavois)** | Linux compliance that reads the running config, not the files &nbsp; <a href="https://github.com/stephrobert/pavois/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a> |
+<table>
+  <tr>
+    <td align="center" width="44">🎭</td>
+    <td><a href="https://github.com/stephrobert/feint"><b>feint</b></a></td>
+    <td>the Scaleway, Outscale and Exoscale APIs, on your laptop</td>
+    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="141 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
+  </tr>
+  <tr>
+    <td align="center" width="44">🧪</td>
+    <td><a href="https://github.com/stephrobert/dsoxlab"><b>dsoxlab</b></a></td>
+    <td>hands-on DevSecOps labs that grade the machine, not your typing</td>
+    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="72 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
+  </tr>
+  <tr>
+    <td align="center" width="44">🛰️</td>
+    <td><a href="https://github.com/stephrobert/pepin"><b>pepin</b></a></td>
+    <td>three sovereign clouds, one axis</td>
+    <td align="right"><a href="https://github.com/stephrobert/pepin/stargazers"><img alt="15 stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square&label=&color=eab308"></a></td>
+  </tr>
+  <tr>
+    <td align="center" width="44">🛡️</td>
+    <td><a href="https://github.com/stephrobert/pavois"><b>pavois</b></a></td>
+    <td>Linux compliance that reads the running config, not the files</td>
+    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="0 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
+  </tr>
+</table>
 
 ---
 
