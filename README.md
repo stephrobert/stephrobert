@@ -203,16 +203,16 @@ Self-hosted, runnable, no signup wall.
 
 ## 🛠️ What I actually use
 
-| | |
-|---|---|
-| **Infrastructure as code** | Terraform · OpenTofu · Pulumi · Packer · Vagrant |
-| **Configuration** | Ansible · Chef / CINC · InSpec |
-| **Runtime** | Kubernetes · Talos · K3s · Docker · Incus · KVM/libvirt |
-| **CI/CD** | GitHub Actions · GitLab CI · Dagger |
-| **Supply chain** | SLSA · SBOM · Cosign · Sigstore · Trivy · OpenSSF Scorecard · Semgrep |
-| **Observability** | Prometheus · Grafana · Loki |
-| **Languages** | Python · Go · Shell · HCL |
-| **Cloud** | Outscale · AWS · GCP |
+<table>
+  <tr><td><b>Infrastructure as code</b></td><td>Terraform · OpenTofu · Pulumi · Packer · Vagrant</td></tr>
+  <tr><td><b>Configuration</b></td><td>Ansible · Chef / CINC · InSpec</td></tr>
+  <tr><td><b>Runtime</b></td><td>Kubernetes · Talos · K3s · Docker · Incus · KVM/libvirt</td></tr>
+  <tr><td><b>CI/CD</b></td><td>GitHub Actions · GitLab CI · Dagger</td></tr>
+  <tr><td><b>Supply chain</b></td><td>SLSA · SBOM · Cosign · Sigstore · Trivy · OpenSSF Scorecard · Semgrep</td></tr>
+  <tr><td><b>Observability</b></td><td>Prometheus · Grafana · Loki</td></tr>
+  <tr><td><b>Languages</b></td><td>Python · Go · Shell · HCL</td></tr>
+  <tr><td><b>Cloud</b></td><td>Scaleway · Outscale · Exoscale · AWS · GCP</td></tr>
+</table>
 
 <details>
 <summary><b>Why this page has no stats widget</b></summary>
