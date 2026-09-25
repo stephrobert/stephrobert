@@ -170,6 +170,7 @@ SECURITY_REPOS = [
 TRAINING_REPOS = [
     "linux-dsoxlab-training",
     "kubernetes-dsoxlab-training",
+    "terraform-dsoxlab-training",
     "containers-training",
     "ansible-training",
     "python-training",
