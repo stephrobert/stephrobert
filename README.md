@@ -17,7 +17,7 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2641 stars across 39 public repositories" src="https://img.shields.io/badge/stars-2641%20across%2039%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2649 stars across 39 public repositories" src="https://img.shields.io/badge/stars-2649%20across%2039%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -41,7 +41,7 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🧪</td>
     <td><a href="https://github.com/stephrobert/dsoxlab"><b>dsoxlab</b></a></td>
     <td>hands-on DevSecOps labs that grade the machine, not your typing</td>
-    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="78 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="81 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🛰️</td>
@@ -196,8 +196,8 @@ Self-hosted, runnable, no signup wall.
 
 - **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 38</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
 - **[kubernetes-dsoxlab-training](https://github.com/stephrobert/kubernetes-dsoxlab-training)** <sub>★ 4</sub> — Labs Kubernetes vérifiables pour CKA, CKAD et CKS, sur un cluster kubeadm vanilla. Pilotés par la CLI dsoxlab.
-- **[terraform-dsoxlab-training](https://github.com/stephrobert/terraform-dsoxlab-training)** <sub>★ 9</sub> — Labs Terraform vérifiables, du premier terraform init aux certifications HashiCorp Associate et Professional. Pilotés par la CLI dsoxlab.
-- **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 167</sub> — Formation Conteneurisation Gratuite
+- **[terraform-dsoxlab-training](https://github.com/stephrobert/terraform-dsoxlab-training)** <sub>★ 12</sub> — Labs Terraform vérifiables, du premier terraform init aux certifications HashiCorp Associate et Professional. Pilotés par la CLI dsoxlab.
+- **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 168</sub> — Formation Conteneurisation Gratuite
 - **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 118</sub> — Une formation Ansible complète
 - **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 42</sub> — Une formation Python pour les Admin Sys
 - **[github-actions-training](https://github.com/stephrobert/github-actions-training)** <sub>★ 6</sub> — Hands-on training repository.
