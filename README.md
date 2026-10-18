@@ -194,13 +194,13 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 Self-hosted, runnable, no signup wall.
 
-- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 44</sub> — Linux DevSecOps training (RHCSA + LFCS) driven by the dsoxlab CLI
-- **[kubernetes-dsoxlab-training](https://github.com/stephrobert/kubernetes-dsoxlab-training)** <sub>★ 5</sub> — Labs Kubernetes vérifiables pour CKA, CKAD et CKS, sur un cluster kubeadm vanilla. Pilotés par la CLI dsoxlab.
-- **[terraform-dsoxlab-training](https://github.com/stephrobert/terraform-dsoxlab-training)** <sub>★ 28</sub> — Labs Terraform vérifiables, du premier terraform init aux certifications HashiCorp Associate et Professional. Pilotés par la CLI dsoxlab.
+- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 44</sub> — Plateforme de labs pédagogiques pour la formation Linux du blog Stéphane Robert.
+- **[kubernetes-dsoxlab-training](https://github.com/stephrobert/kubernetes-dsoxlab-training)** <sub>★ 5</sub> — Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.
+- **[terraform-dsoxlab-training](https://github.com/stephrobert/terraform-dsoxlab-training)** <sub>★ 28</sub> — Lab pédagogique public de la formation Terraform (parcours du blog).
 - **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 169</sub> — Formation Conteneurisation Gratuite
-- **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 119</sub> — Une formation Ansible complète
+- **[ansible-training](https://github.com/stephrobert/ansible-training)** <sub>★ 119</sub> — Lab pédagogique public de la formation Ansible RHCE EX294 2026.
 - **[python-training](https://github.com/stephrobert/python-training)** <sub>★ 44</sub> — Une formation Python pour les Admin Sys
-- **[github-actions-training](https://github.com/stephrobert/github-actions-training)** <sub>★ 7</sub> — Hands-on training repository.
+- **[github-actions-training](https://github.com/stephrobert/github-actions-training)** <sub>★ 7</sub> — Un lab par compétence du parcours GitHub Actions du blog.
 
 ## 🛠️ What I actually use
 
