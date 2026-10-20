@@ -17,7 +17,7 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2703 stars across 46 public repositories" src="https://img.shields.io/badge/stars-2703%20across%2046%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2705 stars across 47 public repositories" src="https://img.shields.io/badge/stars-2705%20across%2047%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -41,7 +41,7 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🧪</td>
     <td><a href="https://github.com/stephrobert/dsoxlab"><b>dsoxlab</b></a></td>
     <td>hands-on DevSecOps labs that grade the machine, not your typing</td>
-    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="93 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="94 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🛰️</td>
@@ -194,7 +194,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 Self-hosted, runnable, no signup wall.
 
-- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 44</sub> — Plateforme de labs pédagogiques pour la formation Linux du blog Stéphane Robert.
+- **[linux-dsoxlab-training](https://github.com/stephrobert/linux-dsoxlab-training)** <sub>★ 45</sub> — Plateforme de labs pédagogiques pour la formation Linux du blog Stéphane Robert.
 - **[kubernetes-dsoxlab-training](https://github.com/stephrobert/kubernetes-dsoxlab-training)** <sub>★ 5</sub> — Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.
 - **[terraform-dsoxlab-training](https://github.com/stephrobert/terraform-dsoxlab-training)** <sub>★ 28</sub> — Lab pédagogique public de la formation Terraform (parcours du blog).
 - **[containers-training](https://github.com/stephrobert/containers-training)** <sub>★ 169</sub> — Formation Conteneurisation Gratuite
