@@ -17,7 +17,7 @@
   <a href="https://blog.stephane-robert.info"><img alt="Blog: blog.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2705 stars across 47 public repositories" src="https://img.shields.io/badge/stars-2705%20across%2047%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2711 stars across 47 public repositories" src="https://img.shields.io/badge/stars-2711%20across%2047%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -35,25 +35,25 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🎭</td>
     <td><a href="https://github.com/stephrobert/feint"><b>feint</b></a></td>
     <td>the Scaleway, Outscale and Exoscale APIs, on your laptop</td>
-    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="154 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="157 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🧪</td>
     <td><a href="https://github.com/stephrobert/dsoxlab"><b>dsoxlab</b></a></td>
     <td>hands-on DevSecOps labs that grade the machine, not your typing</td>
-    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="94 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="95 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🛰️</td>
     <td><a href="https://github.com/stephrobert/pepin"><b>pepin</b></a></td>
     <td>three sovereign clouds, one axis</td>
-    <td align="right"><a href="https://github.com/stephrobert/pepin/stargazers"><img alt="16 stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/pepin/stargazers"><img alt="17 stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🛡️</td>
     <td><a href="https://github.com/stephrobert/pavois"><b>pavois</b></a></td>
     <td>Linux compliance that reads the running config, not the files</td>
-    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="130 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="131 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
   </tr>
 </table>
 
