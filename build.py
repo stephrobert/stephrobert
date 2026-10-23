@@ -31,7 +31,7 @@ EMPLOYER = {
 }
 # Not /feed.xml: that one serves a 129-byte <redirect> stub that feedparser
 # silently parses into zero entries.
-FEED_URL = "https://blog.stephane-robert.info/rss.xml"
+FEED_URL = "https://www.stephane-robert.info/rss.xml"
 API = "https://api.github.com"
 TIMEOUT = 20
 
@@ -167,15 +167,19 @@ SECURITY_REPOS = [
     # "confkit",   # superseded by pavois
     "secure-python-pipeline",
 ]
-TRAINING_REPOS = [
-    "linux-dsoxlab-training",
-    "kubernetes-dsoxlab-training",
-    "terraform-dsoxlab-training",
-    "containers-training",
-    "ansible-training",
-    "python-training",
-    "github-actions-training",
-]
+
+# The training catalogs are RECOGNISED, not listed.
+#
+# They used to be a hand-written list of seven names, and it went stale the way every
+# hand-written list does: three of its entries had stopped being catalogs (one renamed,
+# one emptied), and none of the ones published since had been added. The page announced
+# seven while the account carried three times as many.
+#
+# A catalog is now anything that carries the root file of the dsoxlab contract,
+# `meta.yml`, and its labs are counted in the repository tree. Publishing a catalog is
+# therefore enough to make it appear here, and emptying one is enough to make it leave.
+CATALOG_MARKER = "meta.yml"
+LAB_MARKER = "/lab.yaml"
 
 
 @dataclass
@@ -185,6 +189,7 @@ class Repo:
     stars: int
     language: str
     url: str
+    default_branch: str = "main"
     topics: list[str] = field(default_factory=list)
 
 
@@ -219,10 +224,55 @@ def fetch_repos(s: requests.Session) -> dict[str, Repo]:
                 stars=item.get("stargazers_count", 0),
                 language=item.get("language") or "",
                 url=item["html_url"],
+                default_branch=item.get("default_branch") or "main",
                 topics=item.get("topics") or [],
             )
         page += 1
     return repos
+
+
+def tree_paths(s: requests.Session, repo: Repo) -> set[str] | None:
+    """Every file path of a repository, in one call. None if it has no tree yet.
+
+    A truncated tree would under-count the labs of a catalog and report the shortfall
+    as a fact, so it is refused rather than rounded down. Non-catalogs are only warned
+    about: their tree is read to find out whether they are catalogs at all.
+    """
+    r = s.get(
+        f"{API}/repos/{USER}/{repo.name}/git/trees/{repo.default_branch}",
+        params={"recursive": "1"},
+        timeout=TIMEOUT,
+    )
+    if r.status_code in (404, 409):  # empty repository, or no such branch
+        return None
+    r.raise_for_status()
+    data = r.json()
+    paths = {e["path"] for e in data.get("tree", []) if e.get("type") == "blob"}
+    if data.get("truncated"):
+        if CATALOG_MARKER in paths:
+            raise RuntimeError(
+                f"the tree of {repo.name} is truncated: its lab count would be wrong"
+            )
+        print(f"warning: truncated tree for {repo.name}, not treated as a catalog", file=sys.stderr)
+    return paths
+
+
+def catalogs(s: requests.Session, repos: dict[str, Repo]) -> list[dict]:
+    """The training catalogs, measured from the repositories themselves.
+
+    Ordered by how much they carry, so the page opens on the substantial ones. A catalog
+    whose first lab is not written yet is kept, with a count of zero: the template says
+    so in one line instead of pretending it is not there.
+    """
+    found = []
+    for repo in sorted(repos.values(), key=lambda r: r.name):
+        paths = tree_paths(s, repo)
+        if paths is None or CATALOG_MARKER not in paths:
+            continue
+        labs = sum(1 for p in paths if p.startswith("labs/") and p.endswith(LAB_MARKER))
+        found.append({"repo": repo, "labs": labs})
+    found.sort(key=lambda c: (-c["labs"], c["repo"].name))
+    return found
 
 
 def pick(repos: dict[str, Repo], names: list[str]) -> list[Repo]:
@@ -299,6 +349,13 @@ def main() -> int:
     for repo in repos.values():
         repo.description = strip_name_prefix(repo.name, repo.description)
 
+    trouves = catalogs(s, repos)
+    # Same reasoning as the featured repositories: one catalog missing is a catalog that
+    # is still private, and that is fine. All of them missing means the detection broke,
+    # and a training section with no training in it would be worse than a build failure.
+    if not trouves:
+        raise RuntimeError(f"no repository carries a root {CATALOG_MARKER}: detection is broken")
+
     context = {
         "user": user,
         "employer": EMPLOYER,
@@ -307,7 +364,10 @@ def main() -> int:
         "public_repos": len(repos),
         "featured": featured(repos),
         "security_repos": pick(repos, SECURITY_REPOS),
-        "training_repos": pick(repos, TRAINING_REPOS),
+        "catalogs": [c for c in trouves if c["labs"]],
+        "catalogs_scaffolded": [c for c in trouves if not c["labs"]],
+        "catalog_count": len(trouves),
+        "lab_count": sum(c["labs"] for c in trouves),
         "posts": latest_posts(),
     }
 
@@ -326,7 +386,8 @@ def main() -> int:
 
     print(
         f"README.md rendered: {context['public_repos']} repos, "
-        f"{context['total_stars']} stars, {len(context['posts'])} posts"
+        f"{context['total_stars']} stars, {len(context['posts'])} posts, "
+        f"{context['catalog_count']} catalogs totalling {context['lab_count']} labs"
     )
     return 0
 

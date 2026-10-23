@@ -101,11 +101,24 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-Self-hosted, runnable, no signup wall.
+**{{ catalog_count }} catalogs, {{ lab_count }} labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/{{ user.login }}/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
-{% for repo in training_repos %}
-- **[{{ repo.name }}]({{ repo.url }})**{% if repo.stars %} <sub>★ {{ repo.stars }}</sub>{% endif %} — {{ repo.description or "Hands-on training repository." }}
+<table>
+  <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
+{% for c in catalogs %}
+  <tr>
+    <td><a href="{{ c.repo.url }}"><b>{{ c.repo.name }}</b></a>{% if c.repo.stars %} <sub>★ {{ c.repo.stars }}</sub>{% endif %}</td>
+    <td align="right">{{ c.labs }}</td>
+    <td>{{ c.repo.description or "Hands-on lab catalog." }}</td>
+  </tr>
 {% endfor %}
+</table>
+
+{% if catalogs_scaffolded %}
+{{ catalogs_scaffolded | length }} more already carry the framework's scaffolding and are waiting for their first lab: {% for c in catalogs_scaffolded %}[{{ c.repo.name }}]({{ c.repo.url }}){% if not loop.last %}, {% endif %}{% endfor %}.
+{% endif %}
+
+<sub>This list is not maintained by hand: `build.py` calls a repository a catalog when it carries the contract's root `meta.yml`, and counts its `labs/**/lab.yaml`. A catalog published today appears here tomorrow, and one that is emptied leaves on its own.</sub>
 
 ## 🛠️ What I actually use
 
