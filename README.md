@@ -171,11 +171,11 @@ pavois bundle before.json after.json  # signable evidence
 
 Free, in French, and updated far more often than this README. Roughly a hundred articles and a full DevOps course live at **[www.stephane-robert.info](https://www.stephane-robert.info)**.
 
-- **[X-Pipe simplifie vos connexions shell](https://www.stephane-robert.info/post/xpipe-fichiers-terminal/)** <sub>2026-10-17</sub>
-- **[Du site de formations au parcours par compétences : où j'en suis](https://www.stephane-robert.info/post/du-site-de-formations-au-parcours-par-competences/)** <sub>2026-10-16</sub>
-- **[L'extension Visual Studio Code Terraform](https://www.stephane-robert.info/post/terraform-vscode-extension/)** <sub>2026-10-15</sub>
-- **[Mes extensions Visual Studio Code préférées pour le DevOps](https://www.stephane-robert.info/post/vscode-favorite-extensions/)** <sub>2026-10-15</sub>
-- **[actions-cool/issues-helper : 53 tags pointent sur un commit piégé](https://www.stephane-robert.info/post/actions-cool-tag-poisoning/)** <sub>2026-10-13</sub>
+- **[Transformer ce site en vraies formations, pas en tas de guides](https://www.stephane-robert.info/post/traiter-la-dette-du-site/)** <sub>2026-10-23</sub>
+- **[Du site de formations au parcours par compétences : où j'en suis](https://www.stephane-robert.info/post/du-site-de-formations-au-parcours-par-competences/)** <sub>2026-10-08</sub>
+- **[Une roadmap publique pour maintenir mes formations avec vous](https://www.stephane-robert.info/post/roadmap-publique-maintenir-formations/)** <sub>2026-09-17</sub>
+- **[npm ne lance plus les scripts d'installation : pnpm l'avait fait avant](https://www.stephane-robert.info/post/npm-scripts-installation-desactives/)** <sub>2026-07-28</sub>
+- **[Quand vos dépôts GitHub deviennent l'infrastructure d'attaque d'un autre](https://www.stephane-robert.info/post/github-actions-infrastructure-attaque-cpanel/)** <sub>2026-07-23</sub>
 
 <p>
   <a href="https://www.stephane-robert.info/post/"><img alt="Read all articles" src="https://img.shields.io/badge/read-all%20articles-2dd4bf?style=flat-square"></a>
