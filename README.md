@@ -17,7 +17,7 @@
   <a href="https://www.stephane-robert.info"><img alt="Blog: www.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2715 stars across 51 public repositories" src="https://img.shields.io/badge/stars-2715%20across%2051%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2716 stars across 51 public repositories" src="https://img.shields.io/badge/stars-2716%20across%2051%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -35,7 +35,7 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🎭</td>
     <td><a href="https://github.com/stephrobert/feint"><b>feint</b></a></td>
     <td>the Scaleway, Outscale and Exoscale APIs, on your laptop</td>
-    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="158 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="159 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🧪</td>
@@ -53,7 +53,7 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🛡️</td>
     <td><a href="https://github.com/stephrobert/pavois"><b>pavois</b></a></td>
     <td>Linux compliance that reads the running config, not the files</td>
-    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="131 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="132 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
   </tr>
 </table>
 
@@ -192,7 +192,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-**17 catalogs, 498 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
+**17 catalogs, 518 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
 <table>
   <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
@@ -217,6 +217,11 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
     <td>Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.</td>
   </tr>
   <tr>
+    <td><a href="https://github.com/stephrobert/publier-service-dsoxlab-training"><b>publier-service-dsoxlab-training</b></a></td>
+    <td align="right">36</td>
+    <td>Labs Publier un service pour dsoxlab : un reverse proxy devant ses services, avec des certificats obtenus automatiquement.</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/stephrobert/gitlab-ci-dsoxlab-training"><b>gitlab-ci-dsoxlab-training</b></a></td>
     <td align="right">29</td>
     <td>Hands-on lab catalog.</td>
@@ -230,11 +235,6 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
     <td><a href="https://github.com/stephrobert/iam-dsoxlab-training"><b>iam-dsoxlab-training</b></a></td>
     <td align="right">16</td>
     <td>Les labs de la formation « Gestion des identités et des accès ».</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/stephrobert/publier-service-dsoxlab-training"><b>publier-service-dsoxlab-training</b></a></td>
-    <td align="right">16</td>
-    <td>Labs Publier un service pour dsoxlab : un reverse proxy devant ses services, avec des certificats obtenus automatiquement.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/stephrobert/dev-pour-ops-dsoxlab-training"><b>dev-pour-ops-dsoxlab-training</b></a></td>
