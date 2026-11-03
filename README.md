@@ -192,7 +192,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-**18 catalogs, 627 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
+**18 catalogs, 640 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
 <table>
   <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
@@ -207,14 +207,14 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
     <td>Lab pédagogique public de la formation Terraform (parcours du blog).</td>
   </tr>
   <tr>
+    <td><a href="https://github.com/stephrobert/containers-dsoxlab-training"><b>containers-dsoxlab-training</b></a> <sub>★ 1</sub></td>
+    <td align="right">90</td>
+    <td>Labs vérifiables de la formation Conteneurisation du blog.</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/stephrobert/linux-dsoxlab-training"><b>linux-dsoxlab-training</b></a> <sub>★ 46</sub></td>
     <td align="right">89</td>
     <td>Plateforme de labs pédagogiques pour la formation Linux du blog Stéphane Robert.</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/stephrobert/containers-dsoxlab-training"><b>containers-dsoxlab-training</b></a> <sub>★ 1</sub></td>
-    <td align="right">77</td>
-    <td>Labs vérifiables de la formation Conteneurisation du blog.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/stephrobert/kubernetes-dsoxlab-training"><b>kubernetes-dsoxlab-training</b></a> <sub>★ 7</sub></td>
