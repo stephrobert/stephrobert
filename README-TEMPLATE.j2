@@ -47,7 +47,6 @@ Four tools, each one because the existing answer did not hold up.
 ### {{ f.emoji }} {{ f.repo.name }} — {{ f.tagline }}
 
 <p>
-  <a href="{{ f.repo.url }}/actions/workflows/{{ f.ci }}"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/{{ user.login }}/{{ f.repo.name }}/{{ f.ci }}?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/{{ user.login }}/{{ f.repo.name }}"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/{{ user.login }}/{{ f.repo.name }}?style=flat-square&label=OpenSSF%20Scorecard"></a>
   <a href="{{ f.repo.url }}/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/{{ user.login }}/{{ f.repo.name }}?style=flat-square&logo=github&color=2dd4bf"></a>
   <a href="{{ f.repo.url }}/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/{{ user.login }}/{{ f.repo.name }}?style=flat-square"></a>
