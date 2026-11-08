@@ -62,7 +62,6 @@ Four tools, each one because the existing answer did not hold up.
 ### 🎭 feint — the Scaleway, Outscale and Exoscale APIs, on your laptop
 
 <p>
-  <a href="https://github.com/stephrobert/feint/actions/workflows/go.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/feint/go.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/feint"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/feint?style=flat-square&label=OpenSSF%20Scorecard"></a>
   <a href="https://github.com/stephrobert/feint/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/feint?style=flat-square&logo=github&color=2dd4bf"></a>
   <a href="https://github.com/stephrobert/feint/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square"></a>
@@ -88,7 +87,6 @@ terraform apply               # against the emulator, nothing billed
 ### 🧪 dsoxlab — hands-on DevSecOps labs that grade the machine, not your typing
 
 <p>
-  <a href="https://github.com/stephrobert/dsoxlab/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/dsoxlab/ci.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/dsoxlab"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/dsoxlab?style=flat-square&label=OpenSSF%20Scorecard"></a>
   <a href="https://github.com/stephrobert/dsoxlab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/dsoxlab?style=flat-square&logo=github&color=2dd4bf"></a>
   <a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square"></a>
@@ -119,7 +117,6 @@ dsoxlab list-labs             # the catalog is detected from the repo's meta.yml
 ### 🛰️ pepin — three sovereign clouds, one axis
 
 <p>
-  <a href="https://github.com/stephrobert/pepin/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/pepin/ci.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/pepin"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/pepin?style=flat-square&label=OpenSSF%20Scorecard"></a>
   <a href="https://github.com/stephrobert/pepin/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/pepin?style=flat-square&logo=github&color=2dd4bf"></a>
   <a href="https://github.com/stephrobert/pepin/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/pepin?style=flat-square"></a>
@@ -144,7 +141,6 @@ pepin scan --tf plan.json             # or of a plan, before apply
 ### 🛡️ pavois — Linux compliance that reads the running config, not the files
 
 <p>
-  <a href="https://github.com/stephrobert/pavois/actions/workflows/go.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/stephrobert/pavois/go.yml?style=flat-square&label=CI&logo=githubactions&logoColor=white"></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/stephrobert/pavois"><img alt="OpenSSF Scorecard rating" src="https://img.shields.io/ossf-scorecard/github.com/stephrobert/pavois?style=flat-square&label=OpenSSF%20Scorecard"></a>
   <a href="https://github.com/stephrobert/pavois/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/stephrobert/pavois?style=flat-square&logo=github&color=2dd4bf"></a>
   <a href="https://github.com/stephrobert/pavois/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square"></a>
