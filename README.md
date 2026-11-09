@@ -188,7 +188,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-**18 catalogs, 641 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
+**18 catalogs, 643 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
 <table>
   <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
@@ -199,7 +199,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
   </tr>
   <tr>
     <td><a href="https://github.com/stephrobert/containers-dsoxlab-training"><b>containers-dsoxlab-training</b></a> <sub>★ 2</sub></td>
-    <td align="right">91</td>
+    <td align="right">93</td>
     <td>Labs vérifiables de la formation Conteneurisation du blog.</td>
   </tr>
   <tr>
