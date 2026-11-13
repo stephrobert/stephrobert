@@ -17,7 +17,7 @@
   <a href="https://www.stephane-robert.info"><img alt="site: www.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2738 stars across 50 public repositories" src="https://img.shields.io/badge/stars-2738%20across%2050%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2739 stars across 50 public repositories" src="https://img.shields.io/badge/stars-2739%20across%2050%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -53,7 +53,7 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🛡️</td>
     <td><a href="https://github.com/stephrobert/pavois"><b>pavois</b></a></td>
     <td>Linux compliance that reads the running config, not the files</td>
-    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="138 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/pavois/stargazers"><img alt="139 stars" src="https://img.shields.io/github/stars/stephrobert/pavois?style=flat-square&label=&color=eab308"></a></td>
   </tr>
 </table>
 
@@ -188,7 +188,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-**18 catalogs, 678 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
+**18 catalogs, 694 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
 <table>
   <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
@@ -199,7 +199,7 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
   </tr>
   <tr>
     <td><a href="https://github.com/stephrobert/kubernetes-dsoxlab-training"><b>kubernetes-dsoxlab-training</b></a> <sub>★ 7</sub></td>
-    <td align="right">99</td>
+    <td align="right">106</td>
     <td>Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.</td>
   </tr>
   <tr>
@@ -243,6 +243,11 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
     <td>Une initiation au développement pour les Ops, en Python.</td>
   </tr>
   <tr>
+    <td><a href="https://github.com/stephrobert/cloud-dsoxlab-training"><b>cloud-dsoxlab-training</b></a></td>
+    <td align="right">13</td>
+    <td>Labs de la formation Cloud du blog, joués sans compte cloud ni carte bancaire.</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/stephrobert/devsecops-dsoxlab-training"><b>devsecops-dsoxlab-training</b></a></td>
     <td align="right">13</td>
     <td>Un seul projet, notes-api, durci version après version au fil de la formation DevSecOps</td>
@@ -271,11 +276,6 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
     <td><a href="https://github.com/stephrobert/cicd-dsoxlab-training"><b>cicd-dsoxlab-training</b></a></td>
     <td align="right">5</td>
     <td>Les labs de la formation « Introduction aux pipelines CI/CD » du blog, joués SANS AUCUN COMPTE sur une forge locale (Forgejo et son runner) dans une VM du lab.</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/stephrobert/cloud-dsoxlab-training"><b>cloud-dsoxlab-training</b></a></td>
-    <td align="right">4</td>
-    <td>Labs de la formation Cloud du blog, joués sans compte cloud ni carte bancaire.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/stephrobert/github-actions-training"><b>github-actions-training</b></a> <sub>★ 7</sub></td>
