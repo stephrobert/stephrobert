@@ -17,7 +17,7 @@
   <a href="https://www.stephane-robert.info"><img alt="site: www.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2740 stars across 50 public repositories" src="https://img.shields.io/badge/stars-2740%20across%2050%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2739 stars across 50 public repositories" src="https://img.shields.io/badge/stars-2739%20across%2050%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -188,19 +188,19 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-**18 catalogs, 699 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
+**18 catalogs, 702 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
 <table>
   <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
   <tr>
+    <td><a href="https://github.com/stephrobert/kubernetes-dsoxlab-training"><b>kubernetes-dsoxlab-training</b></a> <sub>★ 7</sub></td>
+    <td align="right">114</td>
+    <td>Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/stephrobert/ansible-training"><b>ansible-training</b></a> <sub>★ 119</sub></td>
     <td align="right">113</td>
     <td>Lab pédagogique public de la formation Ansible RHCE EX294 2026.</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/stephrobert/kubernetes-dsoxlab-training"><b>kubernetes-dsoxlab-training</b></a> <sub>★ 7</sub></td>
-    <td align="right">111</td>
-    <td>Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/stephrobert/containers-dsoxlab-training"><b>containers-dsoxlab-training</b></a> <sub>★ 2</sub></td>
