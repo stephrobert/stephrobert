@@ -188,13 +188,13 @@ Free, in French, and updated far more often than this README. Roughly a hundred 
 
 ## 🎓 Free training catalogs
 
-**19 catalogs, 758 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
+**19 catalogs, 763 labs.** Self-hosted, runnable, no signup wall, no SaaS. Every one of them is driven by [dsoxlab](https://github.com/stephrobert/dsoxlab) and graded the way the real exams grade: on the state of the machine after a reboot, not on the commands you typed.
 
 <table>
   <tr><th align="left">Catalog</th><th align="right">Labs</th><th align="left">What it covers</th></tr>
   <tr>
     <td><a href="https://github.com/stephrobert/kubernetes-dsoxlab-training"><b>kubernetes-dsoxlab-training</b></a> <sub>★ 7</sub></td>
-    <td align="right">156</td>
+    <td align="right">161</td>
     <td>Labs vérifiables pour la formation Kubernetes du blog Stéphane Robert.</td>
   </tr>
   <tr>
