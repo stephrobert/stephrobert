@@ -17,7 +17,7 @@
   <a href="https://www.stephane-robert.info"><img alt="site: www.stephane-robert.info" src="https://img.shields.io/badge/blog-stephane--robert.info-2dd4bf?style=flat-square&logo=hugo&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/stephanerobert1/"><img alt="LinkedIn profile" src="https://img.shields.io/badge/LinkedIn-stephanerobert1-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="https://github.com/stephrobert?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/stephrobert?style=flat-square&logo=github&label=followers&color=6366f1"></a>
-  <img alt="2754 stars across 51 public repositories" src="https://img.shields.io/badge/stars-2754%20across%2051%20repos-eab308?style=flat-square&logo=github">
+  <img alt="2756 stars across 51 public repositories" src="https://img.shields.io/badge/stars-2756%20across%2051%20repos-eab308?style=flat-square&logo=github">
 </p>
 
 I am **Stéphane ROBERT**, infrastructure engineer at <a href="https://github.com/linagora"><img src="https://avatars.githubusercontent.com/u/1230365?s=48&v=4" height="18" alt="LINAGORA" align="top"> <b>LINAGORA</b></a>, working from Yffiniac in Brittany, France.
@@ -35,13 +35,13 @@ Four tools, each one because the existing answer did not hold up.
     <td align="center" width="44">🎭</td>
     <td><a href="https://github.com/stephrobert/feint"><b>feint</b></a></td>
     <td>the Scaleway, Outscale and Exoscale APIs, on your laptop</td>
-    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="166 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/feint/stargazers"><img alt="167 stars" src="https://img.shields.io/github/stars/stephrobert/feint?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🧪</td>
     <td><a href="https://github.com/stephrobert/dsoxlab"><b>dsoxlab</b></a></td>
     <td>hands-on DevSecOps labs that grade the machine, not your typing</td>
-    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="119 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
+    <td align="right"><a href="https://github.com/stephrobert/dsoxlab/stargazers"><img alt="120 stars" src="https://img.shields.io/github/stars/stephrobert/dsoxlab?style=flat-square&label=&color=eab308"></a></td>
   </tr>
   <tr>
     <td align="center" width="44">🛰️</td>
